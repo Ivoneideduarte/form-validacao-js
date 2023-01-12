@@ -1,0 +1,101 @@
+:root {
+    --color-white: #a8a8b3
+    ;
+    --color-red: #e63636;
+    --color-dark1: #121214;
+    --color-dark2: #202024
+    ;
+    --color-purple1: #a883ff;
+    --color-purple2: #8257e5
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}  
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    background-color: var(--color-dark2);
+    padding: 2rem; /*32px*/
+    border-radius: 10px;
+    min-height: 30%;
+    overflow: auto; /*scroll do mouse para navegar na página*/
+}
+
+h1 {
+    margin-bottom: 1rem; /*16px*/
+    text-align: center;
+}
+
+.content form {
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.span-requerid {
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    color: var(--color-red);
+    display: none; /*Deixa invisível os spans*/
+}
+
+.inputs {
+    padding: 8px 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color-dark1);
+    border: 2px solid var(--color-dark1);
+    color: var(--color-white);
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.inputs:focus {
+    border-color: var(--color-purple1);
+}
+
+.box-select {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    gap: 1rem;
+}
+
+button[type='submit'] {
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: var(--color-purple2);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button[type='submit']:hover {
+    background-color: var(--color-purple1);
+}
+
+@media screen and (max-width: 576px) {
+    .box-select {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
